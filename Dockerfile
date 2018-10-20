@@ -10,5 +10,8 @@ RUN yum clean all
 
 RUN wget http://download.sonatype.com/nexus/3/nexus-3.14.0-04-unix.tar.gz
 RUN tar xvf nexus-3.14.0-04-unix.tar.gz
+RUN rm -f nexus-3.14.0-04-unix.tar.gz
 
-ENTRYPOINT [ "nexus-3.14.0-04-unix/bin/nexus", "start" ]
+WORKDIR /opt/nexus-3.14.0-04/bin/
+
+ENTRYPOINT [ "./nexus", "start" ] 
