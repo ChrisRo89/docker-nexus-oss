@@ -29,7 +29,6 @@ USER nexus
 ENTRYPOINT [ "./nexus", "run" ]
 
 VOLUME [ "/opt/sonatype-work/" ]
-VOLUME [ "/opt/nexus-3.14.0-04/etc" ]
 
 EXPOSE 8081
 EXPOSE 8443
