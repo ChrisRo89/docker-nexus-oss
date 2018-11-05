@@ -1,5 +1,7 @@
 # docker-nexus-oss
 
+[![Build Status](https://travis-ci.org/ChrisRo89/docker-nexus-oss.svg?branch=master)](https://travis-ci.org/ChrisRo89/docker-nexus-oss)
+
 ## Exposed ports / volumes
 
 + 8081 (http)
