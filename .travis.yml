@@ -1,0 +1,21 @@
+language: bash
+services: docker
+
+env:
+
+install:
+  - git clone https://github.com/ChrisRo89/docker-nexus-oss ~/docker-nexus-oss 
+
+before_script:
+  - image="nexus-iss" 
+
+script:
+
+  - |
+    (
+      set -Eeuo pipefail
+      set -x
+      docker build -t "$image" .
+    )
+after_script:
+  - docker images
